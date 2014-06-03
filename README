@@ -1,0 +1,26 @@
+This stellar evolution package is meant as a learning tool.  There
+are many things that can be improved, e.g. opacity, equation of state,
+nuclear burning, etc. and the routines are not always optimized for
+performance or accuracy.
+
+On a unix machine the following should calculate the evolution of a
+1 solar mass star from the "birthline" (standard composition, 
+equilibrium deuterium burning) to well into the red giant phase
+at the beginning of core helium burning...
+
+$ make all
+$ polytr < polytr1.inp
+$ stellar < pmsstar1.start > pmsstar1.lst
+$ stellar < pmsstar1.inp >> pmsstar1.lst
+
+The .inp file is set up to run 500 models at a time.
+
+The evolution of a 3 solar mass star from the birthline well into
+helium shell burning is calculated with
+
+$ polytr < polytr3.inp
+$ stellar < pmsstar3.start > pmsstar3.lst
+$ stellar < pmsstar3.inp >> pmsstar3.lst
+
+The .inp file is set up to continue running until the
+program reaches an error exit.

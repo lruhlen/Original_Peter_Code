@@ -1,0 +1,105 @@
+C**********Basic input parameters**********
+star data        headline
+200              nsteps
+ 05              noutbod
+ 1               noutlog
+ .02              dtime
+ 0.8             tol
+ 0.1             eps
+ .FALSE.         inpteps
+ .true.          variabls (collisionless)
+ 20              nsvolume (for collisionless particles)
+ 0.05            nsvtol (collisionless)
+ .false.         usequad
+ .false.         dgravsum
+vacuum           boundary
+ .false.         restart
+C**********Individual time steps**********
+ 8               inittbin
+ 512             mintstep
+ 10000.          etol
+ 8              ntvector
+C**********SPH input parameters**********
+ .true.          usesph
+ .TRUE.          sphinit
+ .FALSE.         uentropy
+ .false.         isotherm
+sph              artfvisc
+ 0.05            epsgas
+ 1.666             gamma
+ 0.5             alpha
+ 1.0             beta
+ 0.01            epssph
+ 0.5             courant
+ .true.          variablh
+ .true.          variablg
+ 0.0             consthsm
+ 40              nsmooth
+ 0.05             nsmtol
+hk               symmetry
+ .FALSE.         geogradp
+ .FALSE.         sphfiltr
+ 0.01            epsfiltr
+ .FALSE.         readinas
+ .FALSE.         outputas
+ .FALSE.         readinet
+ .FALSE.         outputet
+ .FALSE.         inpmetal
+ .FALSE.         inptform
+C**********Cooling/heating parameters**********
+ .FALSE.          radiate
+ 4.68e-3         aheatmh
+ 7.08e20         bheatmh2
+ 3.57e26         ccoolmh2
+ 3.24e-12        comptmh
+ 1.3333          meanmwt
+ 0.745           fhydrogn
+ 1.211e-8        mhboltz
+ 3.2404e-12      kpcunit
+ .08             msolunit
+ 10000.          mintemp
+ 1.e20           slowcool
+ 1.e-20          ctcutoff
+ .FALSE.         ethinit
+ .FALSE.         entinit
+C**********Rigid halo parameters**********
+ .FALSE.         fixthalo
+ 0.22527         vhalo
+ 3.5             gamhalo
+ 24.             rhalo
+ 0               nsat
+C**********Triaxial model parameters*********
+ .FALSE.         fixtriax
+ 1.0             atriax
+ 0.625           btriax
+ 0.5             ctriax
+ 1.0             mastriax
+C************Rigid bar parameters************
+ .FALSE.         rigidbar
+ 0.0             patspeed
+ 0.0             barmass
+ 0.0             barsize
+ 70.0            tgrowbar
+ 630.0           tlivebar
+ 0.0             tdiebar
+C************Black hole parameters***********
+ .FALSE.         usebh
+ 1.e6            massbh
+ 2.0             etabh
+ -6.0            tstartbh
+C**********Miscellaneous parameters**********
+ .TRUE.          selfgrav
+ .FALSE.         starform
+ .FALSE.         friction
+ .FALSE.         friclucy
+ 0.3             cfrict
+C**********Cosmological parameters**********
+ 0.0             omega0
+ 0.0             hubble0
+ .FALSE.         cosmo
+ .FALSE.         comove
+ 0.              ecosm
+ 1.              pboxsize
+ 1               noutcosm
+ 0               exparout
+

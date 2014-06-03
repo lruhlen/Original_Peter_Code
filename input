@@ -1,0 +1,75 @@
+1000.          time of integration (years)
+200           number of timesteps per print (watch out!)
+1.0            mass of the central star (solar masses)
+0              set to 1 if making a surface of section (nb should be 3)
+0              set to 0 if reading in semi-major axes, 1 if reading periods
+0.38709893     periods (days) or semi-major axes (au)
+0.72333199
+1.00000011
+1.52366231
+5.20336301
+9.53707032
+19.19126393
+30.06896348
+39.48168677
+2              set to 0 if reading m anom, 1 if Time of Peri, 2 if m longitude
+252.25084      mean anoms (deg), or Peri Passages (days), or m longitudes (deg)
+181.97973
+100.46435
+355.45332
+34.40438
+49.94432
+313.23218
+304.88003
+238.92881
+2451545.0      Starting Epoch (JDs)
+0.             velocity offset for radial velocity fitting (m/s)
+0.20563069     eccentricities
+0.00677323                               
+0.01671022
+0.09341233
+0.04839266
+0.05415060
+0.04716771
+0.00858587
+0.24880766
+77.45645       longitudes of pericentre (deg)
+131.53298
+102.94719
+336.04084
+14.75385
+92.43194
+170.96424
+44.97135
+224.06676
+7.00487         inclination body 1 (deg)
+3.39471
+0.00005
+1.85061
+1.30530
+2.48446
+0.76986
+1.76917
+17.14175
+48.33167        longitudes of ascending node (deg)
+76.68069                       
+348.73936
+49.57854
+100.55615
+113.71504
+74.22988
+131.72169
+110.30347
+1                set to 1 if inputting mass, 0 if inputting r.v. half-amp
+0.3302           Masses (x10^27 g)
+4.8685    
+5.9736
+0.64185
+1898.6
+568.46
+86.832
+102.43
+0.0127
+1.0e-13          individual timestep accuracy for bulirsch-stoer
+0.1              timestep interval for integrator (fraction period 1)
+1                set to 0 for astrocentric coords, 1 for jacobi coords

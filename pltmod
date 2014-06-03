@@ -1,0 +1,37 @@
+# plots the final state of the model
+data lh1.out
+read m 2
+read r 3
+read u 4
+read rho 5
+read p 6
+read eps 7
+set eps=eps/13.
+read w 8
+expand 1.3
+era
+ctype white
+ltype 0
+limits r u
+lweight 3
+box
+relocate (26000 1500)
+putlabel 9 radius
+#lweight 2
+ctype blue
+connect r p
+relocate (20000 28000)
+putlabel 9 pressure
+ctype yellow 
+connect r u
+relocate (20000 27000)
+putlabel 9 velocity
+ctype red
+connect r rho
+relocate (20000 26000)
+putlabel 9 density
+ctype green
+connect r w
+relocate (20000 25000)
+putlabel 9 artificial viscosity
+

@@ -1,0 +1,154 @@
+********  pmsstar.start (v3.6) *****************************************
+*
+*  Case S1 (1 solar mass, no mass loss or gain, standard composition)
+*
+*  This file gives the input parameters for starting a new "stellar"
+*  model sequence.  Lines which begin with a non-blank character are
+*  comments, which can be interspersed with the input data.  Comment
+*  lines beginning with "c" or "C" are not printed out.
+*
+************************************************************************
+*
+*  The first line designates the input model.  The user supplies a
+*  unit number ( < 5 or > 6 ) and a file name.
+*  If the unit number is "1", "stellar" assumes ascii model data which
+*  has been produced by the program "polytr".  Presumably, this is a
+*  polytropic model with polytrope index n=3/2.
+*  If the unit number is greater than "1", then "stellar" reads in a
+*  model in the same binary format as written out by "stellar".
+*
+ STARTING MODEL    :  1 polyout
+*
+*  This line designates the binary output file for "stellar" data.
+*  If the unit number preceeding the name of the file is the same as
+*  the unit number given for the input file, then the output is added
+*  to the input file after the user-specified model is read in.
+*
+ BINARY OUTPUT FILE:  2 pmsstar1.mod
+*
+*  The following line specifies integer-type input parameters:
+*  MODA   designates the starting model number.  For MODA=0 
+*         ascii data is assumed (unit number of input data = 1).
+*         For MODA < 0 the last model on the file is read in.
+*  NMOD   designates the number of models to be calculated.  If
+*         NMOD < 0, then "stellar" continues to produce models
+*         until it bombs.
+*  NRIT   designates how often detailed model output is produced
+*         (including writing binary output)
+*  ITMN   minimum number of iterations in "henyey".  If ITMN < 0,
+*         then detailed information for the "henyey" iteration
+*         abs(ITMN) is printed out.  If abs(ITMN) is greater than
+*         10 then full henyey corrections are NOT made.
+*  ITMX   maximum number of iterations in "henyey".  IF ITMX < 0,
+*         then detailed information for each iteration is printed.
+ MODA=     0 NMOD=   100 NRIT=    50 ITMN=     2 ITMX=   200
+*
+*  JADD   if JADD > 0, then a grid cell is added after the j-th grid
+*         point before proceeding with the calculations.
+*  JSUB   if JSUB > 0, then the j-th grid cell is deleted before
+*         proceeding with the calculations.
+*  NATM   Every NATM-th point of the atmosphere is printed out.
+*
+ JADD=     0 JSUB=     0 NATM=    10
+*
+*  Atmx   and
+*  Atmn   designate the maximum and minimum temperatures of the bottom
+*         of the atmosphere (outermost temperature of the interior
+*         solution) allowed by "stellar".  If outside this range, then
+*         grid cells will be automatically added or deleted. Generally,
+*         the program tries to maintain the bottom of the atmosphere
+*         at a temperature given by the average between Atmx and Atmn.
+*  dTAX   is the maximum relative DELTAU in "atmos" normalized by TAU.
+*  L/H    is the ratio of mixing length to pressure scale height.
+*
+ Atmx= 2.00E+05 Atmn= 1.00E+04 dTAX= 1.00E-05 L/H = 2.00E-00
+*
+*  dLmx   and
+*  dLmn   designate the maximum and minimum jumps in luminosity
+*         normalized by the maximum luminosity.  Grid points will be
+*         automatically added if dLmx is exceeded, but deleted only
+*         if all conditions are met (there are also pressure, abundance,
+*         and grid separation criteria).
+*  dXmx   and
+*  dXmn   designate the maximum and minimum jumps in chemical abundance
+*         of hydrogen and helium.  Grid points will be automatically
+*         added if dLmx is exceeded, but deleted only if all conditions
+*         are met (there are also luminosity, pressure, and grid
+*         separation criteria).
+*
+ dLmx= 1.00E-01 dLmn= 1.00E-03 dXmx= 5.00E-02 dXmn= 1.00E-02
+*
+*  dPmx   and 
+*  dPmn   designate the maximum and minimum relative jumps in pressure.
+*         Grid points will be automatically added if dPmx is exceeded,
+*         but deleted only if all conditions are met (there are also
+*         abundance, grid separation and luminosity variation criteria).
+*  Crad   can be used to reduce the contribution of radiation pressure
+*         by setting Crad < 1.  Do not, however, set Crad = 0.
+*  Cwrk   can be used to reduce the PdV term to the energy equation.
+*
+ dPmx= 5.00E-02 dPmn= 1.00E-03 Crad= 1.00E-00 Cwrk= 0.00E+00
+*
+*  dZmx   and 
+*  dZmn   designate the maximum and minimum  fractional jumps in the mass grid.    
+*  dZdt   relative speed with which the grid cell M(N-1) can move.
+*
+ dZmx= 5.00E-03 dZmn= 1.00E-06 dZdt= 5.00E-00
+*
+*  The following "epsilon" values give the convergence criteria for
+*  the "henyey" variables P, R, L, and T.
+*
+ epsP= 1.00E-04 epsR= 1.00E-04 epsL= 5.00E-04 epsT= 1.00E-04 
+*
+*  The following minimum values are added to the normalization of
+*  the corrections of "henyey" variables (prevents division by zero).
+*
+ SMIN= 1.00E-05       1.00E-05       1.00E+10       1.00E-05
+*
+*  The following gives maximum relative changes to the "henyey"
+*  variables  P, R, L, and T during each iteration.  If > 0, then
+*  positive definite variables are assumed.
+*
+ SMAX= 0.060000       0.060000       0.500000       0.060000
+*
+*  dTIM  specifies the starting time step in seconds.  If DTIM < 0,
+*        then the time step from the input model is assumed.
+*  FACT  not used at pressent
+*  dTMN  and
+*  dTMX  designate the minimum and maximum allowed values for time
+*        step increments.
+*
+ dTIM= 1.00E+11 FACT= 1.00E+00 dTMN= 2.00E+08 dTMX= 1.00E+12
+*
+*  CHMN  and
+*  CHMX  are the minimum and maximum allowed relative changes of all
+*        henyey variables.  If the relative changes are below CHMN
+*        the time step is increased (if allowed by dTMX), and if
+*        the relative changes are above CHMX the time step is
+*        decreased (if allowed by dTMN).
+*  XX    is starting hydrogen abundance.
+*  YY    is starting helium abundance.
+*
+ CHMN= 0.030000 CHMX= 0.060000 XX  = 0.710000 YY  = 0.272930
+*
+*  The following abundances are: 1 (hydrogen),
+*  2 (deuterium), 3 (C), 4 (Mg), 5 (Ca), 6 (Al), 7 (Si), 8 (S),
+*  9 (Mn), 10 (K), 11 (Fe), 12 (N), 13 (O), 14 (Ne)
+*  Whenever the deuterium abundance is set to a negative value,
+*  the deuterium abundance is not updated after each time step.
+*
+       7.10E-01      -4.00E-05       3.40E-03       2.72E-05
+       5.02E-04       4.53E-05       5.53E-04       3.84E-04
+       3.32E-06       5.69E-05       9.39E-04       1.26E-03
+       8.25E-03       1.65E-03
+*
+*  The following pairs of numbers denote a table of mass fluxes at
+*  specified times.  Up to 10 entries in the table (this number can be
+*  modified in "massflux") are allowed.  For intermediate times, the mass
+*  flux will be interpolated.  Positive mass flux is used for accretion
+*  onto the star, whereas negative flux denotes mass loss.
+*
+*  Time     Mass Flux
+   0.00      0.00
+   1.00E34   0.00
+   1.00E37   0.00

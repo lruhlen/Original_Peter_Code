@@ -1,0 +1,87 @@
+
+************LIST OF FILES ON THIS DISK**************
+
+Section 10.1  Radiation Transfer
+
+    trace.f
+    tracedefs.h
+    trace.inp
+
+Section 10.2  Stellar Evolution
+
+    README
+    makefile
+
+    PROGRAM FILES
+
+    parm.h
+    var.h
+    addsub.F
+    atmos.F
+    gi.F
+    henyey.F
+    invstate.F
+    nucrat.F
+    opacity.F
+    stellar.F
+    polytr.F
+    lstmod.F
+
+    INPUT FILES
+
+    polytr1.inp
+    polytr3.inp
+    polytr03.inp
+    pmsstar1.start
+    pmsstar3.start
+    pmsstar03.start
+    pmsstar1.inp
+    pmsstar3.inp
+    pmsstar03.inp
+
+    TABLES
+
+    eostable
+    eospointer
+    opac.cool
+    hyd.cond
+    hel.cond
+    GN93hz
+
+Section 10.3  1-D Lagrangian
+
+    lh1.f
+    lh1.dat
+    commons.f
+    pltmod
+    plte
+ 
+Section 10.4  ZEUS 3-D Hydrodynamics
+
+    Zdistr.tar
+
+Section 10.5  N-body Codes
+
+    toomre.f
+    macro.total
+
+    integrator.f
+    input
+
+    symplec.f
+    input.symplec
+
+    nbodyfft.f
+    fftdefs.h
+
+Section 10.6  Smoothed Particle Hydrodynamics
+
+    sph.f
+    treedefs.h
+    TREEPAR
+    TREEBI
+
+______________________________________________
+    THIS FILE 
+
+TOTAL FILES: 51

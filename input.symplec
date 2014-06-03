@@ -1,0 +1,22 @@
+   50000.                  integration timescale
+   0.5                      timestep size (days)
+   1.0e-8                   Energy accuracy tolerance (not used)
+   30000                     printout interval 
+   1.30                     central mass (solar masses)
+   241.5                    period planet 1 (days)
+   1284.                    period planet 2 (days)
+   1                        set to 1 if reading Tperi, 0 if mean anomaly
+   2450160.5                time periastron  planet 1 (days) or m.a. (deg)
+   2450064.0                time periastron  planet 2 (days) or m.a. (deg)
+   2450064.0                epoch at which integration starts (days)
+   0.280000                 eccentricity planet 1
+   0.270                    eccentricity planet 2
+   250.0                    argument of periastron of planet 1 (deg)
+   260.0                    argument of periastron of planet 2 (deg)
+   00.000000000000          inclination of planet 1 (deg)
+   00.000000000000          inclination of planet 2 (deg)
+   0.0000000000000          node of planet 1 (deg)
+   0.0000000000000          node of planet 2 (deg)
+   1                        set to 1 if inputting jupiter masses, 0 if K (m/s)
+   1.89                     mass of planet 1 (Mjup)
+   3.75                     mass of planet 2 (Mjup)

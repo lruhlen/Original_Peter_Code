@@ -1,0 +1,162 @@
+data snap001
+xlimits -3.5 1.5
+ylimits -3.5 1.5
+square
+expand 1.5
+tlabel restricted 3-body encounter
+expand 1.0
+xcol 1
+ycol 2
+expand .3
+ptype 10 0
+points
+expand 1.
+lines 1 1
+xcol 1
+ycol 2
+ptype 10 3
+point
+lines 2 2
+xcol 1
+ycol 2
+ptype 10 0
+point
+ptype 1 0
+
+data snap002
+xcol 1
+ycol 2
+expand .3
+ptype 10 0
+points
+expand 1.
+lines 1 1
+xcol 1
+ycol 2
+ptype 10 3
+point
+lines 2 2
+xcol 1
+ycol 2
+ptype 10 0
+point
+ptype 1 0
+
+data snap003
+xcol 1
+ycol 2
+expand .3
+ptype 10 0
+points
+expand 1.
+lines 1 1
+xcol 1
+ycol 2
+ptype 10 3
+point
+lines 2 2
+xcol 1
+ycol 2
+ptype 10 0
+point
+ptype 1 0
+
+data snap004
+xcol 1
+ycol 2
+expand .3
+ptype 10 0
+points
+expand 1.
+lines 1 1
+xcol 1
+ycol 2
+ptype 10 3
+point
+lines 2 2
+xcol 1
+ycol 2
+ptype 10 0
+point
+ptype 1 0
+
+data snap005
+xcol 1
+ycol 2
+expand .3
+ptype 10 0
+points
+expand 1.
+lines 1 1
+xcol 1
+ycol 2
+ptype 10 3
+point
+lines 2 2
+xcol 1
+ycol 2
+ptype 10 0
+point
+ptype 1 0
+
+data snap006
+xcol 1
+ycol 2
+expand .3
+ptype 10 0
+points
+expand 1.
+lines 1 1
+xcol 1
+ycol 2
+ptype 10 3
+point
+lines 2 2
+xcol 1
+ycol 2
+ptype 10 0
+point
+ptype 1 0
+
+data snap007
+xcol 1
+ycol 2
+expand .3
+ptype 10 0
+points
+ptype 10 3
+color 5
+points
+color 1
+expand 1.
+lines 1 1
+xcol 1
+ycol 2
+ptype 10 0
+point
+color 5
+ptype 10 3
+point
+color 1
+lines 2 2
+xcol 1
+ycol 2
+ptype 10 0
+point
+color 5
+ptype 10 3
+point
+color 1
+ptype 1 0
+
+data gal1.pos
+xcol 1
+ycol 2
+color 2
+connect
+data gal2.pos
+xcol 1
+ycol 2
+color 4
+connect
+color 1
